@@ -10,6 +10,13 @@ namespace Entity_Framework
         {
             using (var context = new AsupContext())
             {
+
+                //var vendors = new List<Vendor>() { 
+                //    new Vendor() { Id = Guid.NewGuid(), Name = "ClassSolutions" },
+                //    new Vendor() { Id = Guid.NewGuid(), Name = "WoodSolutions" },
+                //};
+                //context.Vendor.AddRange(vendors);
+
                 //var product = new Product()
                 //{
                 //    Id = Guid.NewGuid(),
