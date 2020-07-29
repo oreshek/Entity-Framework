@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity Framework", "Entity Framework.csproj", "{97C4EF9A-9F68-4337-B8AB-4D4ECAB92380}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfUi", "..\WpfUi\WpfUi.csproj", "{26ACE5E6-8AE3-41DA-876A-F98FB3794E7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfUi", "..\WpfUi\WpfUi.csproj", "{26ACE5E6-8AE3-41DA-876A-F98FB3794E7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBFirst", "DBFirst\DBFirst.csproj", "{CDA65DC1-DF20-444D-BF48-C2B6441F8B05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDelegate", "..\TestDelegate\TestDelegate.csproj", "{B16DEDEA-432D-4187-B748-539A7F01A7DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{26ACE5E6-8AE3-41DA-876A-F98FB3794E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26ACE5E6-8AE3-41DA-876A-F98FB3794E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26ACE5E6-8AE3-41DA-876A-F98FB3794E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDA65DC1-DF20-444D-BF48-C2B6441F8B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA65DC1-DF20-444D-BF48-C2B6441F8B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA65DC1-DF20-444D-BF48-C2B6441F8B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA65DC1-DF20-444D-BF48-C2B6441F8B05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B16DEDEA-432D-4187-B748-539A7F01A7DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B16DEDEA-432D-4187-B748-539A7F01A7DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B16DEDEA-432D-4187-B748-539A7F01A7DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B16DEDEA-432D-4187-B748-539A7F01A7DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

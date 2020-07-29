@@ -4,14 +4,16 @@ using Entity_Framework;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Entity_Framework.Migrations
 {
     [DbContext(typeof(AsupContext))]
-    partial class AsupContextModelSnapshot : ModelSnapshot
+    [Migration("20200720185132_ManyToManyMigration")]
+    partial class ManyToManyMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -19,7 +21,7 @@ namespace Entity_Framework.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Entity_Framework.Entities.Materials", b =>
+            modelBuilder.Entity("Entity_Framework.Materials", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,7 +38,7 @@ namespace Entity_Framework.Migrations
                     b.ToTable("Materials");
                 });
 
-            modelBuilder.Entity("Entity_Framework.Entities.Product", b =>
+            modelBuilder.Entity("Entity_Framework.Product", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -61,7 +63,7 @@ namespace Entity_Framework.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("Entity_Framework.Entities.ProductMaterials", b =>
+            modelBuilder.Entity("Entity_Framework.ProductMaterials", b =>
                 {
                     b.Property<Guid>("ProductId")
                         .HasColumnType("uniqueidentifier");
@@ -76,7 +78,7 @@ namespace Entity_Framework.Migrations
                     b.ToTable("ProductMaterials");
                 });
 
-            modelBuilder.Entity("Entity_Framework.Entities.Vendor", b =>
+            modelBuilder.Entity("Entity_Framework.Vendor", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -90,24 +92,24 @@ namespace Entity_Framework.Migrations
                     b.ToTable("Vendor");
                 });
 
-            modelBuilder.Entity("Entity_Framework.Entities.Product", b =>
+            modelBuilder.Entity("Entity_Framework.Product", b =>
                 {
-                    b.HasOne("Entity_Framework.Entities.Vendor", "Vendor")
+                    b.HasOne("Entity_Framework.Vendor", "Vendor")
                         .WithMany("Products")
                         .HasForeignKey("VendorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Entity_Framework.Entities.ProductMaterials", b =>
+            modelBuilder.Entity("Entity_Framework.ProductMaterials", b =>
                 {
-                    b.HasOne("Entity_Framework.Entities.Materials", "Material")
+                    b.HasOne("Entity_Framework.Materials", "Material")
                         .WithMany("ProductMaterials")
                         .HasForeignKey("MaterialId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Entity_Framework.Entities.Product", "Product")
+                    b.HasOne("Entity_Framework.Product", "Product")
                         .WithMany("ProductMaterials")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,6 +11,32 @@ namespace Entity_Framework
         {
             using (var context = new AsupContext())
             {
+
+                var p = context.Products
+                    .Include(p => p.ProductMaterials)
+                    .ThenInclude(p => p.Material)
+                    .ToList();
+
+                //var product = context.Products.FirstOrDefault();
+
+                //var materials = context.Materials.ToList();
+
+                //product.ProductMaterials = new List<ProductMaterials>();
+                //foreach (var m in materials) {
+                //    product.ProductMaterials.Add(new ProductMaterials() {
+                //        ProductId = product.Id,
+                //        MaterialId = m.Id
+                //    });
+                //}
+
+                //context.SaveChanges();
+
+                //context.Materials.AddRange(new List<Materials>() { 
+                //    new Materials() { Id = Guid.NewGuid(), Value = "", Type = "Wood" }, 
+                //    new Materials() { Id = Guid.NewGuid(), Value = "", Type = "Glass" },
+                //    new Materials() { Id = Guid.NewGuid(), Value = "", Type = "Plastic" }});
+
+                //context.SaveChanges();
 
                 //var vendors = new List<Vendor>() { 
                 //    new Vendor() { Id = Guid.NewGuid(), Name = "ClassSolutions" },

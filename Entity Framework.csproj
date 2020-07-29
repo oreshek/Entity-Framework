@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -7,7 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Compile Remove="Migrations\20200720152308_CreateManyToManyRelation.cs" />
+    <Compile Remove="Migrations\20200720152308_CreateManyToManyRelation.Designer.cs" />
+    <Compile Remove="Migrations\20200724142307_Update2.cs" />
+    <Compile Remove="Migrations\20200724142307_Update2.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
