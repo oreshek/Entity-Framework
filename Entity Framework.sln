@@ -11,11 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBFirst", "DBFirst\DBFirst.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDelegate", "..\TestDelegate\TestDelegate.csproj", "{B16DEDEA-432D-4187-B748-539A7F01A7DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNetTest", "..\ASPNetTest\ASPNetTest.csproj", "{8D0CF50E-8415-4F73-BEC7-9452D7B6C0B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPNetTest", "..\ASPNetTest\ASPNetTest.csproj", "{8D0CF50E-8415-4F73-BEC7-9452D7B6C0B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC\MVC.csproj", "{CCECF090-8000-4354-8C6D-395A5A4B5CE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadTest", "..\ThreadTest\ThreadTest.csproj", "{9FDB08D8-2DC7-449B-8BB1-746521498D77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadTest", "..\ThreadTest\ThreadTest.csproj", "{9FDB08D8-2DC7-449B-8BB1-746521498D77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "..\ConsoleApp1\ConsoleApp1.csproj", "{58B72B5E-945F-4F80-B0E0-4896EF2CD4C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{9FDB08D8-2DC7-449B-8BB1-746521498D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FDB08D8-2DC7-449B-8BB1-746521498D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FDB08D8-2DC7-449B-8BB1-746521498D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58B72B5E-945F-4F80-B0E0-4896EF2CD4C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58B72B5E-945F-4F80-B0E0-4896EF2CD4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58B72B5E-945F-4F80-B0E0-4896EF2CD4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58B72B5E-945F-4F80-B0E0-4896EF2CD4C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
