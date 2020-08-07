@@ -20,9 +20,10 @@ namespace Entity_Framework.Entities
         public Guid VendorId { get; set; }//FK
 
         public Vendor Vendor { get; set; }// Navigation prop
+        public string Inbox { get; set; }
 
-        [NotMapped]
-        public ICollection<Product> Header { get; set; }
+        // [NotMapped]
+
 
     }
 

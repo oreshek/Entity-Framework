@@ -4,14 +4,16 @@ using Entity_Framework;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Entity_Framework.Migrations
 {
     [DbContext(typeof(AsupContext))]
-    partial class AsupContextModelSnapshot : ModelSnapshot
+    [Migration("20200806201606_inbox01")]
+    partial class inbox01
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

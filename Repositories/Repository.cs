@@ -45,10 +45,10 @@ namespace Entity_Framework.Repositories
             return result;
         }
 
-        public async Task<IEnumerable<T>> GetAll()
+        public async  Task<IEnumerable<T>> GetAll()
         {
             
-            return await dbSet.ToListAsync();
+            return await dbSet.AsQueryable().ToListAsync();
         }
 
         public void Update(T entity)
@@ -61,9 +61,9 @@ namespace Entity_Framework.Repositories
             asupContext.Dispose();
         }
 
-        IQueryable<T> IRepository<T>.GetAll()
+        public IQueryable<T> GetAllAsQueryable()
         {
-            return (IQueryable<T>)GetAll();
+            return this.dbSet.AsQueryable();
         }
     }
 }

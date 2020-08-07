@@ -15,10 +15,12 @@ namespace Entity_Framework
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=helloappdb;Trusted_Connection=True;");
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<ProductMaterials>()
                 .HasKey(t => new { t.ProductId, t.MaterialId });
 
@@ -31,6 +33,7 @@ namespace Entity_Framework
                 .HasOne(x => x.Material)
                 .WithMany(y => y.ProductMaterials)
                 .HasForeignKey(x => x.MaterialId);
+
         }
 
 
